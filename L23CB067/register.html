@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .registration-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .registration-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .registration-form input, 
+        .registration-form textarea, 
+        .registration-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Registration Page -->
+    <h2>Registration Page</h2>
+    <form class="registration-form">
+        <label for="name">1. Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="password">2. Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="email">3. E-mail ID</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">4. Phone Number</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label>5. Sex</label>
+        <label><input type="radio" name="sex" value="male"> Male</label>
+        <label><input type="radio" name="sex" value="female"> Female</label>
+
+        <label>6. Date of Birth</label>
+        <select name="dob-day">
+            <option>Day</option>
+            <option>1</option><option>2</option><option>3</option>
+            <!-- Add more days -->
+        </select>
+        <select name="dob-month">
+            <option>Month</option>
+            <option>January</option><option>February</option>
+            <!-- Add more months -->
+        </select>
+        <select name="dob-year">
+            <option>Year</option>
+            <option>1990</option><option>1991</option>
+            <!-- Add more years -->
+        </select>
+
+        <label>7. Languages Known</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="language" value="english"> English</label>
+            <label><input type="checkbox" name="language" value="telugu"> Telugu</label>
+            <label><input type="checkbox" name="language" value="hindi"> Hindi</label>
+            <label><input type="checkbox" name="language" value="tamil"> Tamil</label>
+        </div>
+
+        <label for="address">8. Address</label>
+        <textarea id="address" name="address" rows="4"></textarea>
+
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>

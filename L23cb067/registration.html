@@ -1,0 +1,158 @@
+<html>
+<head>
+<style> h1{
+color: #800080;
+}
+ul {
+list-style-type: none; margin: 0;
+padding: 0; overflow: hidden;
+background-color: #333;
+}
+li {
+float: left;
+}
+li a {
+display: block; color: white;
+text-align: center; padding: 15px 16px; text-decoration: none;
+
+font-size: 20;
+}
+li a:hover:not(.active) { background-color:#ff8080 ;
+}
+.vertical-menu { width: 200px;
+}
+.vertical-menu a { background-color: #fff; color: black;
+display: block; padding: 12px;
+text-decoration: none;
+}
+.vertical-menu a:hover { background-color: #ff8080;
+}
+input[type=text]{ width: 75%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+
+font-size:15px;
+}
+textarea{ width: 75%;
+padding: 8px 10px; margin: 8px 0; display: inline-block; border: 1px solid #ccc;
+border-radius: 4px; box-sizing: border-box; font-size:15px;
+}
+select{ width: 50%;
+padding: 12px; margin: 8px 0; display: inline-block; border: 1px solid #ccc;
+border-radius: 4px; box-sizing: border-box;
+}
+input[type=email]{ width: 75%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+
+border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size:15px;
+}
+input[type=tel]{ width: 75%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size:15px;
+}
+input[type=date]{ width: 75%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size:15px;
+}
+input[type=submit] {
+
+width: 60%;
+background-color: #4CAF50; color: white;
+padding: 14px 10px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;
+font-size:18px;
+}
+
+
+input[type=submit]:hover { background-color: #339900; color: black;
+}
+label {
+color: black; padding: 8px; font-size:20px;
+}
+input[type=password]{ width: 75%;
+padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc;
+
+border-radius: 3px; box-sizing: border-box; font-size:15px;
+}
+</style>
+</head>
+<body>
+<img src="https://rvrjcce.ac.in/examcell/results/batchpg20/images/RVRJC-Estd-2.jpg" alt="rvrlogo" width="100" height="100" align="left">
+<br>
+<h1 align="center">Book Store Website</h1><br>
+<ul>
+<li><a href="main.html">Home</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="#">Registration</a></li>
+<li><a href="catalogue.html">Catalogue</a></li>
+<li style="float:right"><a href="cart.html">Cart</a></li>
+</ul>
+<br>
+<div style="width: 100%;">
+<div class="vertical-menu"; style="width: 10%; height: 100px; float: left;">
+<a href="csbs.html">CSBS</a>
+<a href="cse.html">CSE</a>
+<a href="ece.html">ECE</a>
+<a href="eee.html">EEE</a>
+<a href="civil.html">CIVIL</a>
+
+</div>
+<div>
+<form name="myform" method="POST" action="register.php" onsubmit="return validateform()">
+<table align="center">
+<tr>
+<td><label>Name:</label></td>
+<td><input type="text" name="Name" placeholder="Enter only alphabets" required><br></td>
+</tr>
+<tr>
+<td><label>Password:</label></td>
+<td><input type="Password" name="Pass" required></td>
+</tr>
+<tr>
+<td><label>Email ID:</label></td>
+<td><input type="email" name="mail" required><br></td>
+</tr>
+<tr>
+<td><label>Phone Number:</label></td>
+<td><input type="tel" id="phone" name="phone" pattern="[6-9]{1}[0-9]{9}" required></td>
+</tr>
+<tr>
+<td><label>Sex:</label></td>
+<td><label><input type="radio" id="male" name="gender" value="male" required>Male</label>
+<label><input type="radio" id="female" name="gender" value="female" required>Female</label><br></td>
+
+</tr>
+<tr>
+<td><label>DOB:</label></td>
+<td><input type="date" name="dob" required><br></td>
+</tr>
+<tr>
+<td><label>Languages Known:</label></td>
+<td> <input type="checkbox" id="eng" name="eng" value="English">
+<label for="eng">English</label><br>
+<input type="checkbox" id="tel" name="tel" value="Telugu">
+<label for="tel">Telugu</label><br>
+<input type="checkbox" id="hin" name="hin" value="Hindi">
+<label for="hin">Hindi</label><br>
+<input type="checkbox" id="tam" name="tam" value="Tamil">
+<label for="tam">Tamil</label><br>
+</td>
+</tr>
+<tr>
+<td><label>Address</label></td>
+<td><textarea rows="4" cols="40"></textarea></td>
+</tr><br>
+<tr>
+<td><input type="submit" value="Register"></td>
+</tr>
+</table>
+</div>
+
+<script>
+function validateform(){
+var name=document.myform.Name.value; if(name.length<6){
+alert("Name must be at least 6 characters long."); return false;
+}
+var password=document.myform.Pass.value; if(password.length<6){
+alert("Password must be at least 6 characters long."); return false;
+}
+}
+</script>
+</div>
+</body>
+</html>

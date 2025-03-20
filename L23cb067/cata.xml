@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="cata.css"?>
+<!DOCTYPE Catalogue SYSTEM "catalogue.dtd">
+<Catalogue>
+<Book>
+<Title>XML Bible</Title>
+<Author>Winston</Author>
+<Publication>Wiely</Publication>
+<Edition>Fifth Edition</Edition>
+<ISBN>0-7645-4760-7</ISBN>
+<Price>$40.5</Price >
+</Book>
+<Book>
+
+<Title>Artificial Intelligence</Title>
+<Author>S. Russel</Author>
+<Publication> Princeton Hall </Publication>
+<Edition> Sixth Edition</Edition>
+<ISBN> 0-13-1038-5-2 </ISBN>
+<Price>$63</Price>
+</Book>
+<Book>
+<Title>Java 2</Title>
+<Author>Watson</Author>
+<Publication>BPB Publications</Publication>
+<Edition>Third Edition</Edition>
+<ISBN>0-41-1058-7-2</ISBN>
+<Price>$63</Price>
+</Book>
+<Book>
+<Title>HTML in 24 hours </Title>
+<Author> Sam Peter</Author>
+<Publication> SAM Publications </Publication>
+<Edition>Fifth Edition</Edition>
+<ISBN> 0-672-32841-0 </ISBN>
+<Price> $50 </Price >
+</Book>
+</Catalogue>

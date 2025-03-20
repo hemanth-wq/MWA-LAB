@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>Student Registration</title>
+</head>
+<body>
+<style>
+body {background-color: #99ffff;} input[type=text]{
+width: 75%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size:25px;
+
+}
+select{ width: 50%;
+padding: 12px; margin: 8px 0; display: inline-block; border: 1px solid #ccc;
+border-radius: 4px; box-sizing: border-box;
+}
+input[type=email]{ width: 75%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size:25px;
+}
+input[type=tel]{ width: 75%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+border: 1px solid #ccc;
+
+border-radius: 4px; box-sizing: border-box; font-size:16px;
+}
+input[type=date]{ width: 75%; padding: 12px 20px; margin: 8px 0; display: inline-block;
+border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size:20px;
+}
+input[type=submit] { width: 40%;
+background-color: #4CAF50; color: white;
+padding: 14px 10px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;
+font-size:18px;
+}
+input[type=submit]:hover {
+
+background-color: #339900;
+}
+input[type=reset] { width: 100%;
+background-color:#ffa64d; color: black;
+padding: 14px 20px; margin: 8px 0; border: none; border-radius: 4px; cursor: pointer;
+font-size:18px;
+}
+input[type=reset]:hover { background-color: #ff6600;
+}
+label {
+color: black; padding: 8px; font-size:20px;
+}
+</style>
+<h1 align="center" style="color:#000000;">Student Registration-2k23</h1>
+<form action="form.php" method="POST">
+<table align="center">
+<tr>
+
+<td><label>First name:</label></td>
+<td><input type="text" name="fname" required><br></td>
+</tr>
+<tr>
+<td><label>Last name:</label></td>
+<td><input type="text" name="lname" required><br></td>
+</tr>
+<tr>
+<td><label>ID Number:</label></td>
+<td><input type="text" name="id" required><br></td>
+</tr>
+<tr>
+<td><label>DOB:</label></td><td><input type="date" required><br></td>
+</tr>
+<tr>
+<td><label>Email ID:</label></td><td><input type="email" required><br></td>
+</tr>
+<tr>
+<td><label>Phone Number:</label></td>
+<td><input	type="tel"	id="phone"	name="phone"	placeholder="[6-9]x[0-9]xxxxxxxxx" pattern="[6-9]{1}[0-9]{9}" required></td>
+</tr>
+<tr>
+<td><label>Sex:</label></td>
+<td><label><input	type="radio"	id="male"	name="gender" value="male" required>Male</label>
+
+<label><input	type="radio"	id="female"	name="gender"	value="female" required>Female</label><br></td>
+</tr>
+<tr>
+<td><label>Department:</label>
+<td><select required>
+<option value="">--CHOOSE--</option>
+<option value="123">CSE</option>
+<option value="123">CSBS</option>
+<option value="123">CSE(DS)</option>
+<option value="123">CSE(IOT)</option>
+<option value="123">CSE(AIML)</option>
+<option value="123">IT</option>
+<option value="123">ECE</option>
+<option value="123">EEE</option>
+<option value="123">MECH</option>
+<option value="123">CIVIL</option>
+<option value="123"+>CHE</option>
+</select><br></td>
+</tr>
+<tr>
+<td><label>Address</label></td> <td><input type="text" required><br></td>
+</tr>
+<tr>
+<td><label>Select Course:</label></td>
+<td><label><input	type="radio"	id="mwa"	name="subject"	value="mwa" required>MWA</label>
+
+<label><input	type="radio"	id="dm"	name="subject"	value="dm"	required>Data Mining</label><br></td>
+</tr><br>
+<tr>
+<td><input type="reset" value="Reset"></td><td><input type="submit" value="Submit"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

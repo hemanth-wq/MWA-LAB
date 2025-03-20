@@ -1,0 +1,57 @@
+<html>
+<body>
+<form method="POST" action="regselect.php">
+<table align="center" cellspacing="5">
+<tr>
+<td>Enter condition column name:</td>
+
+<td><input type="text" name="con"></td>
+</tr>
+<tr>
+<td>Enter condition value:</td>
+<td><input type="text" name="value"></td>
+</tr>
+<tr>
+<td><input type="submit" value="Select"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+regselect.php:
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+$conditioncolumn = $_POST['con'];
+$conditionvalue = $_POST['value'];
+
+
+$hostname = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'mydb';
+$conn = new mysqli($hostname, $username, $password, $database); if ($conn->connect_error) {
+die('Connection failed: ' . $conn->connect_error);
+
+}
+
+
+$sql = "SELECT * FROM registration";
+if (!empty($conditioncolumn) && !empty($conditionvalue)) {
+$sql .= " WHERE `$conditioncolumn` = '$conditionvalue'";
+}
+$result = $conn->query($sql);
+
+
+if ($result && $result->num_rows > 0) { echo "<table border='1'>";
+echo "<tr><th>Name</th><th>Email ID</th><th>Phone Number</th></tr>"; while ($row = $result->fetch_assoc()) {
+echo "<tr>";
+echo "<td>" . $row["uname"] . "</td>";
+echo "<td>" . $row["email"] . "</td>";
+echo "<td>" . $row["phno"] . "</td>"; echo "</tr>";
+}
+echo "</table>";
+} else {
+echo "No records found<br>"; }
+$conn->close();
+}
+?>

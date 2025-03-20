@@ -1,0 +1,24 @@
+Catalogue
+{
+font-family:arial; color:blue;
+font-size:16pt
+}
+Book
+{
+font-family:times new roman; color:blue;
+table-layout:auto; font-size:14pt
+}
+Title
+{
+font-family:arial; color:green; margin-left:20pt; font-size:12pt
+}
+Author
+
+{
+font-family:arial; color:magenta
+}
+Publication,Edition,ISBN,Price
+{
+display:block; font-family:arial; color:black;
+font-size:10pt; margin-left:40pt
+}
